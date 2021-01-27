@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Projects</title>
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <h3>All Projects</h3>
+    {%for project in projects %}
+    <img src="{% static project.image %}" alt="screen shot of project" />
+    <p>{{project.image}}</p>
+    <h1>{{project.title}}</h1>
+    <p>{{project.description}}</p>
+    <p>{{project.technology}}{% endfor %}</p>
+  </body>
+</html>
